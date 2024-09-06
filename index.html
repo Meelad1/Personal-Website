@@ -27,7 +27,9 @@
     header .header-content {
       max-width: 1100px;
       display: flex;
-      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
 
     header img {
@@ -35,35 +37,29 @@
       width: 120px;
       height: 120px;
       object-fit: cover;
-      margin-right: 30px;
+      margin-bottom: 20px;
     }
 
     header h1 {
       font-size: 28px;
-      margin-top: 15px;
-      margin-bottom: 10px;
+      margin: 15px 0 10px;
     }
 
     header h2 {
       font-size: 22px;
-      margin-top: 0;
-    }
-    
-     header h3 {
-      font-size: 18px;
-      margin-top: 5;
+      margin: 0;
     }
 
-    header h4 {
+    header h3 {
       font-size: 18px;
-      margin-top: 5;
+      margin: 5px 0;
     }
 
     main {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      padding: 40px;
+      padding: 20px;
       max-width: 1100px;
       margin: 0 auto;
       border-left: 1px solid #ccc;
@@ -79,21 +75,10 @@
     }
 
     .about {
-      width: 90%;
-      margin-right: 10px;
+      width: 100%;
     }
 
-    .myportfolio {
-      width: 60%;
-      margin-right: 10px;
-    }
-
-    .resume {
-      width: 30%;
-      margin-right: 10px;
-    }
-
-    .custom-section {
+    .myportfolio, .resume {
       width: 100%;
     }
 
@@ -122,6 +107,37 @@
       width: 100%;
       height: 400px;
     }
+
+    /* Media Query for screens wider than 768px (tablets and desktops) */
+    @media (min-width: 768px) {
+      header .header-content {
+        flex-direction: row;
+        text-align: left;
+      }
+
+      header img {
+        margin-right: 30px;
+        margin-bottom: 0;
+      }
+
+      .about {
+        width: 60%;
+        margin-right: 10px;
+      }
+
+      .resume {
+        width: 30%;
+      }
+
+      .myportfolio {
+        width: 60%;
+        margin-right: 10px;
+      }
+
+      .custom-section {
+        width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -131,33 +147,30 @@
       <div>
         <h1>Meelad Doroodchi</h1>
         <h2>CS Major ~ Data Science Concentration, December '24</h2>
-        <h3> Charlotte, NC </h3>
+        <h3>Charlotte, NC</h3>
       </div>
     </div>
   </header>
   <main>
     <section class="about">
       <h3>About Me</h3>
-      <p>
-        My name is Meelad Doroodchi and I am currently a rising senior obtaining my B.S.(December 2024) my M.S.(December 2025) in Computer Science with Data Science concentration from the University of North Carolina - Charlotte. I am an incoming transfer student from Willamette University in Salem, Oregon where I played basketball for three years. My background coding languages that I am proficient in consist of Python, R, SQL, HTML/CSS, Latex, and Java 8+. 
-        I have had the opportunity to participate in a REU at the University of Central Florida on the "Internet of Things" during a summer for the National Science Foundation in which I completed a study on "Effects of Optical See-Through Displays on Self-Avatar Appearance in Augmented Reality". Last summer (Summer '23) I had the opportunity to obtain an internship with Lowe's in the new Tech Hub in Charlotte, NC as a Software Engineer where I helped drive the design, maintenance, testing and evaluation of the software and systems that form the backbone of the company's day-to-day success.
-        This past summer (Summer '24) I had the opportunity to complete an internship with Lumen Technologies as a Quality Assurance Intern where I testing user stories for some of our quoting systems, documented test completion, reported any bugs found, tracked those bugs until resolved, and participated in all Scrum ceremonies (daily, refinement, planning, retrospective).
-  <main>
+      <p>My name is Meelad Doroodchi and I am currently a rising senior obtaining a B.S. and my M.S. in Computer with Data Science concentration from the University of North Carolina - Charlotte. I am an incoming transfer student from Willamette University in Salem, Oregon where I played basketball for three years. My background coding languages that I am proficient in consist of Python, R, SQL, HTML/CSS, Latex, and Java 8+. I have had the opportunity to participate in a REU at the University of Central Florida on the "Internet of Things" during a summer for the National Science Foundation in which I completed a study on "Effects of Optical See-Through Displays on Self-Avatar Appearance in Augmented Reality". Last summer (Summer '23) I had the opportunity to obtain an internship with Lowe's in the new Tech Hub in Charlotte, NC as a Software Engineer where I helped drive the design, maintenance, testing and evaluation of the software and systems that form the backbone of the company's day-to-day success. This past summer (Summer '24) I had the opportunity to complete an internship with Lumen Technologies as a Quality Assurance Intern where I testing user stories for some of our quoting systems, documented test completion, reported any bugs found, tracked those bugs until resolved, and participated in all Scrum ceremonies (daily, refinement, planning, retrospective).</p>
+    </section>
+
     <section class="myportfolio">
       <h3>My Portfolio</h3>
-      <p>
-        Down below are some of the projects I have had the opportunity to create and work on!
+      <p>Down below are some of the projects I have had the opportunity to create and work on!</p>
       <ul>
         <li><a href="https://simonstein18.github.io/goudyApp/">CS-261 Final Project</a></li>
         <li><a href="Data_Mining_Clustering.pdf" target="_blank">Project 4 Data Mining Course</a></li>
         <li><a href="Data_Mining_Regression1.pdf" target="_blank">Project 3 Data Mining Course</a></li>
-        <li><a href ="Data_Mining_Classification_Project.html" target = "_blank">Project 2 Data Mining Course</a></li>
+        <li><a href="Data_Mining_Classification_Project.html" target="_blank">Project 2 Data Mining Course</a></li>
         <li><a href="202380-Fall 2023-ITCS-3162-051-Introduction to Data Mining Project Final.pdf" target="_blank">Project 1 Data Mining Course</a></li>
         <li><a href="REU_PRESENTATION.pdf" target="_blank">REU Presentation</a></li>
         <li><a href="REU_PAPER.pdf" target="_blank">REU Publicated Paper</a></li>
       </ul>
-      </p> 
     </section>
+
     <section class="resume">
       <h4>Resume</h4>
       <p>
@@ -169,5 +182,4 @@
     </section>
   </main>
 </body>
-  
 </html>
